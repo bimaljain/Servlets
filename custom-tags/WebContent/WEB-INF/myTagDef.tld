@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_4.xsd"
+	version="2.4">
+	<description>custom-tags</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>custom-tags</short-name>
+	<function>
+		<name>rollIt</name>
+		<function-class>foo.DiceRoller</function-class>
+		<function-signature>int rollDice</function-signature>
+	</function>
+	<uri>simpleTags</uri>
+	<tag>
+		<description>random-advice</description>
+		<name>tagI</name>
+		<tag-class>foo.handlerForTagI</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>user</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>tagII</name>
+		<tag-class>foo.handlerForTagII</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>tagIII</name>
+		<tag-class>foo.handlerForTagIII</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>tagIV</name>
+		<tag-class>foo.handlerForTagIV</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>tagV</name>
+		<tag-class>foo.handlerForTagV</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>tagVI</name>
+		<tag-class>foo.handlerForTagVI</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>tagVII</name>
+		<tag-class>foo.handlerForTagVII</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>tagX</name>
+		<tag-class>foo.handlerForTagX</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+	<tag>
+		<name>SimpleChild</name>
+		<tag-class>foo.SimpleChild</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<name>ClassicParent</name>
+		<tag-class>foo.ClassicParent</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>Menu</name>
+		<tag-class>foo.Menu</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<name>MenuItem</name>
+		<tag-class>foo.MenuItem</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>itemValue</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+</taglib>

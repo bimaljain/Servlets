@@ -1,0 +1,6 @@
+<HTML>
+<HEAD><TITLE></TITLE>
+</HEAD>
+<BODY><CENTER>
+<H1>Send Redirect</H1>
+</CENTER></BODY></HTML>

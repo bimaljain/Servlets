@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+<description>role-mapping</description>
+<display-name>role-mapping</display-name>
+
+<!-- servlet mapping -->
+<servlet>
+	<servlet-name>BeerSelect</servlet-name>
+	<servlet-class>com.BeerSelect</servlet-class>
+	<!-- <security-role-ref> maps "Programmatic Role Names" to "<security-role>". --> 
+	<security-role-ref>
+		<role-name>xyz</role-name>
+		<role-link>admin</role-link>
+	</security-role-ref>
+</servlet>
+<servlet-mapping>
+	<servlet-name>BeerSelect</servlet-name>
+	<url-pattern>/BeerSelect.do</url-pattern>
+</servlet-mapping>
+
+<!-- <security-constraint> maps "Application Component" to "Roles" -->
+<security-constraint>
+    <web-resource-collection>
+	      <web-resource-name>Entire Application</web-resource-name>
+	      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+	      <role-name>admin</role-name>
+		  <role-name>manager</role-name>
+		  <role-name>guest</role-name>
+    </auth-constraint>
+</security-constraint>
+
+<!-- <security-role> maps all of the roles defined in the application to users and groups defined on the Application Server (tomcat-users.xml). -->
+<security-role>
+	<role-name>admin</role-name>
+	<!--  <role-name>manager</role-name> -->
+	<!--  <role-name>guest</role-name> -->
+</security-role>
+
+<!-- Enable authentication -->
+<login-config><auth-method>BASIC</auth-method></login-config>
+</web-app>

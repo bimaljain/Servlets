@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <listener>
+     <listener-class>com.example.BeerSessionCounter</listener-class>
+    </listener>
+    <listener>
+     <listener-class>com.example.BeerAttributeListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>firstActionClass</servlet-name>
+        <servlet-class>firstActionClass</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>firstActionClass</servlet-name>
+        <url-pattern>/firstActionClass</url-pattern>
+    </servlet-mapping>
+</web-app>
